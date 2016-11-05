@@ -9,3 +9,6 @@ bsObj = BeautifulSoup(request, 'lxml')
 for link in bsObj.find('div', {'id':'bodyContent'}).findAll('a', href=re.compile('^(/wiki/)((?!:).)*$')):
     if 'href' in link.attrs:
         print(link.attrs['href'])
+
+# the urls do not contain colons;
+# the urls begins with /wiki/
